@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<kcweaponmod version="1.0">
+	<weapon name="DefaultWeapon">
+		<texture>kcweaponmod:Default/DefaultItem</texture>
+		<inventorytab>kcweaponmod</inventorytab>
+		<isautomaticorhassecondaryshoot>false</isautomaticorhassecondaryshoot>
+		<iszoomable>true</iszoomable>
+		<zoommultiplier>2+4+8</zoommultiplier>
+		<zoomtexture>kcweaponmod:textures/items/Default/DefaultZoom.png</zoomtexture>
+		<gunshootdelay>0</gunshootdelay>
+		<recoil>0</recoil>
+		<performonly1shootsound>true</performonly1shootsound>
+		<shootsound>kcweaponmod:Default.DefaultShoot</shootsound>
+		
+		<reloadtime>0</reloadtime>
+		<reloadsound>kcweaponmod:Default.DefaultReload</reloadsound>
+		<reloadmaxammoflow>0</reloadmaxammoflow>
+		<reloadtimeloop>0</reloadtimeloop>
+		<reloadsoundloop>kcweaponmod:Default.DefaultReloadLoop</reloadsoundloop>
+		<reloadsoundexit>kcweaponmod:Default.DefaultReloadExit</reloadsoundexit>
+		<ammofeedsfrominventory>false</ammofeedsfrominventory>
+		<ammotype>modidORminecraft:itemname</ammotype>
+		<magazinesize>0</magazinesize>
+		<itemstackdecreaseonuse>false</itemstackdecreaseonuse>
+		<itemstackmaxstacksize>16</itemstackmaxstacksize>
+		<requiredusespershot>1</requiredusespershot>
+		<shootburstcount>1</shootburstcount>
+		<burstaccuracydecrease>0.6</burstaccuracydecrease>
+		<singleshotprojectilecount>1</singleshotprojectilecount>
+		
+		<projectilerenderproperties>0#kcweaponmod:textures/entities/Default/DefaultProjectileRender.png</projectilerenderproperties>
+		<projectilespeed>0</projectilespeed>
+		<accuracy>0</accuracy>
+		<gravity>0.004</gravity>
+		<maxeffectiveticksalive>0</maxeffectiveticksalive>
+		<projectilelivingproperties></projectilelivingproperties>
+		<projectileimpactproperties>Die</projectileimpactproperties>
+		<projectileprematureendoflifeproperties></projectileprematureendoflifeproperties>
+		<projectiledraginair>0.99</projectiledraginair>
+		<projectiledraginwater>0.5</projectiledraginwater>
+		<projectileglows>false</projectileglows>
+		<tracksensitivity>0</tracksensitivity>
+	</weapon>
+</kcweaponmod>
