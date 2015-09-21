@@ -7,9 +7,14 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 
 public class ItemWeaponProperties {
+	// All the properties that can be set for custom weapons / projectiles.
+	// Note that some should NOT be edited and have been labeled "NOT TO BE SET IN CONFIG!".
+	// However there is one exception to this for code sided implementation (not XML) where ProjLivingActArgs & ProjImpactActArgs & ProjPrematureEndLifeActArgs can be edited at any time for things such as different impact damage to entites etc. (Look at Halocraft's Mobs (Elite & Grunt) for example)
 	
 	/** NOT TO BE SET IN CONFIG! This is handled by the mod. */
 	public int ID = -1;
+	/** Whether an item of this property set will appear ingame (false for vehicles). */
+	public boolean RegisterItem = true;
 	/** The unlocalized name of the weapon. */
 	public String Name;
 	/** The Texture used for the weapons item. */
@@ -51,11 +56,11 @@ public class ItemWeaponProperties {
 	public String ReloadSoundExit = KCWeaponMod.MODID + ":Default.DefaultReloadExit";
 	/** If true, it only supports RequiredUsesPerShot of 1 however that variable isn't required to be set. */
 	public boolean AmmoFeedsFromInventory = false;
-	/** The ammo this weapon uses. (Only active if ItemStackDecreaseOnUse if false) */ //FIXME:?
+	/** The ammo this weapon uses. (Only active if ItemStackDecreaseOnUse if false) */
 	public ItemStack AmmoType = null;
 	/** The size of the weapons magazine. (Only active if AmmoFeedsFromInventory is false) */
 	public int MagazineSize = 0;
-	/** Whether the ItemStack will decrease when the weapon is used. (Overrides AmmoFeedsFromInventory, MagazineSize and AmmoType) */ //FIXME:?
+	/** Whether the ItemStack will decrease when the weapon is used. (Overrides AmmoFeedsFromInventory, MagazineSize and AmmoType) */
 	public boolean ItemStackDecreaseOnUse = false;
 	/** How large the ItemStack's stack size can grow to. (Only active if ItemStackDecreaseOnUse is true) */
 	public int ItemStackMaxStackSize = 16;
@@ -70,8 +75,8 @@ public class ItemWeaponProperties {
 	
 	/** The projectile entity's render properties. 0#ArrowRenderTexture, 1#2DRenderTexture, 2#ModelTexture#ModelClass, 3#LargeArrowRenderTexture */
 	public String ProjectileRenderProperties = "0#"+KCWeaponMod.MODID+":textures/entities/Default/DefaultProjectileRender.png";
-	/** NOT TO BE SET IN CONFIG! This is handled by the mod. */
-	public int ProjectileID = 0;
+	/** NOT TO BE SET IN CONFIG! This is handled, configured and processed by the mod for efficiency. */
+	public ProjRenderProp ProjRenderProp = new ProjRenderProp();
 	
 	/** The Speed at which the projectile is launched at. */
 	public float ProjectileSpeed = 0F;
@@ -100,7 +105,7 @@ public class ItemWeaponProperties {
 	/** If the projectile texture glows (is bright). */
 	public boolean ProjectileGlows = false;
 	/** How well the projectile tracks target entities. */
-	public float TrackSensitivity = 0F;
+	public float TrackSensitivity = 0F; //TODO
 	
 	
 	public ItemWeaponProperties() {}

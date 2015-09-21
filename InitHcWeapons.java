@@ -4,13 +4,15 @@ import net.killerchief.halocraft.Halocraft;
 import net.killerchief.kcweaponmod.ItemWeapon;
 import net.killerchief.kcweaponmod.ItemWeaponProperties;
 import net.killerchief.kcweaponmod.KCWeaponMod;
+import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 
 public class InitHcWeapons {
 	
-	public static void DefineAndSendWeapons()
+	public static void DefineAndSendWeapons() //Called in Halocraft preInit - FMLPreInitializationEvent
 	{
-		ItemWeapon[] weapons = new ItemWeapon[20];
+		ItemWeapon[] weapons = new ItemWeapon[25];
 		
 		
 		//BattleRifle
@@ -49,7 +51,7 @@ public class InitHcWeapons {
 		BattleRifle.Accuracy = 1F;
 		BattleRifle.Gravity = 0.004F;
 		BattleRifle.MaxEffectiveTicksAlive = 100;
-		BattleRifle.ProjectileLivingProperties = "";
+		BattleRifle.ProjectileLivingProperties = "null";
 		BattleRifle.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(4, 0, Die)";
 		BattleRifle.ProjectileDragInAir = 0.99F;
 		BattleRifle.ProjectileDragInWater = 0.5F;
@@ -95,7 +97,7 @@ public class InitHcWeapons {
 		DMR.Accuracy = 1F;
 		DMR.Gravity = 0.004F;
 		DMR.MaxEffectiveTicksAlive = 100;
-		DMR.ProjectileLivingProperties = "";
+		DMR.ProjectileLivingProperties = "null";
 		DMR.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(8, 0, Die)";
 		DMR.ProjectileDragInAir = 0.99F;
 		DMR.ProjectileDragInWater = 0.5F;
@@ -141,7 +143,7 @@ public class InitHcWeapons {
 		AssaultRifle.Accuracy = 2.5F;
 		AssaultRifle.Gravity = 0.004F;
 		AssaultRifle.MaxEffectiveTicksAlive = 100;
-		AssaultRifle.ProjectileLivingProperties = "";
+		AssaultRifle.ProjectileLivingProperties = "null";
 		AssaultRifle.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(3, 0, Die)";
 		AssaultRifle.ProjectileDragInAir = 0.99F;
 		AssaultRifle.ProjectileDragInWater = 0.5F;
@@ -187,7 +189,7 @@ public class InitHcWeapons {
 		Shotgun.Accuracy = 6F;
 		Shotgun.Gravity = 0.004F;
 		Shotgun.MaxEffectiveTicksAlive = 5;
-		Shotgun.ProjectileLivingProperties = "";
+		Shotgun.ProjectileLivingProperties = "null";
 		Shotgun.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(2, 0, Die)";
 		Shotgun.ProjectileDragInAir = 0.96F;
 		Shotgun.ProjectileDragInWater = 0.1F;
@@ -233,7 +235,7 @@ public class InitHcWeapons {
 		SniperRifle.Accuracy = 0.6F;
 		SniperRifle.Gravity = 0.004F;
 		SniperRifle.MaxEffectiveTicksAlive = 200;
-		SniperRifle.ProjectileLivingProperties = "";
+		SniperRifle.ProjectileLivingProperties = "null";
 		SniperRifle.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(30, 0, Die)";
 		SniperRifle.ProjectileDragInAir = 0.99F;
 		SniperRifle.ProjectileDragInWater = 0.5F;
@@ -279,7 +281,7 @@ public class InitHcWeapons {
 		Magnum.Accuracy = 2F;
 		Magnum.Gravity = 0.004F;
 		Magnum.MaxEffectiveTicksAlive = 100;
-		Magnum.ProjectileLivingProperties = "";
+		Magnum.ProjectileLivingProperties = "null";
 		Magnum.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(8, 0, Die)";
 		Magnum.ProjectileDragInAir = 0.99F;
 		Magnum.ProjectileDragInWater = 0.5F;
@@ -325,7 +327,7 @@ public class InitHcWeapons {
 		SMG.Accuracy = 5F;
 		SMG.Gravity = 0.004F;
 		SMG.MaxEffectiveTicksAlive = 80;
-		SMG.ProjectileLivingProperties = "";
+		SMG.ProjectileLivingProperties = "null";
 		SMG.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(2, 0, Die)";
 		SMG.ProjectileDragInAir = 0.99F;
 		SMG.ProjectileDragInWater = 0.5F;
@@ -394,7 +396,7 @@ public class InitHcWeapons {
 		Carbine.PerformOnly1ShootSound = true;
 		Carbine.ShootSound = Halocraft.MODID+":weapons.shoot.CarbineShoot";
 		//Carbine.
-		Carbine.ReloadTime = 44;
+		Carbine.ReloadTime = 46;
 		Carbine.ReloadSound = Halocraft.MODID+":weapons.reload.CarbineReload";
 		Carbine.ReloadMaxAmmoFlow = 0;
 		Carbine.ReloadTimeLoop = 0;
@@ -417,7 +419,7 @@ public class InitHcWeapons {
 		Carbine.Accuracy = 1F;
 		Carbine.Gravity = 0.004F;
 		Carbine.MaxEffectiveTicksAlive = 100;
-		Carbine.ProjectileLivingProperties = "";
+		Carbine.ProjectileLivingProperties = "null";
 		Carbine.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(8, 0, Die)";
 		Carbine.ProjectileDragInAir = 0.99F;
 		Carbine.ProjectileDragInWater = 0.5F;
@@ -463,7 +465,7 @@ public class InitHcWeapons {
 		PlasmaRifle.Accuracy = 3F;
 		PlasmaRifle.Gravity = 0.004F;
 		PlasmaRifle.MaxEffectiveTicksAlive = 80;
-		PlasmaRifle.ProjectileLivingProperties = "";
+		PlasmaRifle.ProjectileLivingProperties = "null";
 		PlasmaRifle.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(4, 0, Die)";
 		PlasmaRifle.ProjectileDragInAir = 0.99F;
 		PlasmaRifle.ProjectileDragInWater = 0.5F;
@@ -509,7 +511,7 @@ public class InitHcWeapons {
 		PlasmaPistol.Accuracy = 2F;
 		PlasmaPistol.Gravity = 0.004F;
 		PlasmaPistol.MaxEffectiveTicksAlive = 80;
-		PlasmaPistol.ProjectileLivingProperties = "";
+		PlasmaPistol.ProjectileLivingProperties = "null";
 		PlasmaPistol.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(3, 0, Die)";
 		PlasmaPistol.ProjectileDragInAir = 0.99F;
 		PlasmaPistol.ProjectileDragInWater = 0.5F;
@@ -532,7 +534,7 @@ public class InitHcWeapons {
 		Needler.PerformOnly1ShootSound = true;
 		Needler.ShootSound = Halocraft.MODID+":weapons.shoot.NeedlerShoot";
 		//Needler.
-		Needler.ReloadTime = 44;
+		Needler.ReloadTime = 36;
 		Needler.ReloadSound = Halocraft.MODID+":weapons.reload.NeedlerReload";
 		Needler.ReloadMaxAmmoFlow = 0;
 		Needler.ReloadTimeLoop = 0;
@@ -555,7 +557,7 @@ public class InitHcWeapons {
 		Needler.Accuracy = 3F;
 		Needler.Gravity = 0.004F;
 		Needler.MaxEffectiveTicksAlive = 100;
-		Needler.ProjectileLivingProperties = "";
+		Needler.ProjectileLivingProperties = "null";
 		Needler.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(5, 0, Die)";
 		Needler.ProjectileDragInAir = 0.99F;
 		Needler.ProjectileDragInWater = 0.5F;
@@ -601,7 +603,7 @@ public class InitHcWeapons {
 		BeamRifle.Accuracy = 0.6F;
 		BeamRifle.Gravity = 0.004F;
 		BeamRifle.MaxEffectiveTicksAlive = 200;
-		BeamRifle.ProjectileLivingProperties = "";
+		BeamRifle.ProjectileLivingProperties = "null";
 		BeamRifle.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(30, 0, Die)";
 		BeamRifle.ProjectileDragInAir = 0.99F;
 		BeamRifle.ProjectileDragInWater = 0.5F;
@@ -671,7 +673,7 @@ public class InitHcWeapons {
 		Spiker.ShootSound = Halocraft.MODID+":weapons.shoot.SpikeRifleShoot";
 		//Spiker.
 		Spiker.ReloadTime = 44;
-		Spiker.ReloadSound = Halocraft.MODID+":weapons.reload.SpikerReload";
+		Spiker.ReloadSound = Halocraft.MODID+":weapons.reload.SpikeRifleReload";
 		Spiker.ReloadMaxAmmoFlow = 0;
 		Spiker.ReloadTimeLoop = 0;
 		Spiker.ReloadSoundLoop = "";
@@ -693,7 +695,7 @@ public class InitHcWeapons {
 		Spiker.Accuracy = 7F;
 		Spiker.Gravity = 0.004F;
 		Spiker.MaxEffectiveTicksAlive = 100;
-		Spiker.ProjectileLivingProperties = "";
+		Spiker.ProjectileLivingProperties = "null";
 		Spiker.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), Bounce(0.97, 1, ExceededMaxEncounteredEntities(2, Die)), ImpactEntity(5, 0, Die)";
 		Spiker.ProjectileDragInAir = 0.99F;
 		Spiker.ProjectileDragInWater = 0.5F;
@@ -743,7 +745,7 @@ public class InitHcWeapons {
 		Mauler.Accuracy = 10F;
 		Mauler.Gravity = 0.004F;
 		Mauler.MaxEffectiveTicksAlive = 1;
-		Mauler.ProjectileLivingProperties = "";
+		Mauler.ProjectileLivingProperties = "null";
 		Mauler.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(3, 0, Die)";
 		Mauler.ProjectileDragInAir = 0.96F;
 		Mauler.ProjectileDragInWater = 0.1F;
@@ -957,14 +959,107 @@ public class InitHcWeapons {
 		SentinelBeam.Accuracy = 0.4F;
 		SentinelBeam.Gravity = 0.0F;
 		SentinelBeam.MaxEffectiveTicksAlive = 100;
-		SentinelBeam.ProjectileLivingProperties = "";
+		SentinelBeam.ProjectileLivingProperties = "null";
 		SentinelBeam.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(2, 0, Die)";
 		SentinelBeam.ProjectileDragInAir = 1F;
 		SentinelBeam.ProjectileDragInWater = 1F;
 		
 		weapons[19] = new ItemWeapon(SentinelBeam);
+
 		
-		if (KCWeaponMod.registerModItems(Halocraft.MODID, "1.0", weapons))
+		
+		//Ghost Plasma Bolts
+		ItemWeaponProperties GhostPlasmaBolts = new ItemWeaponProperties();
+		GhostPlasmaBolts.RegisterItem = false;
+		GhostPlasmaBolts.Name = Halocraft.MODID+".Vehicle.GhostPlasmaBolts";
+		GhostPlasmaBolts.ProjectileRenderProperties = Halocraft.MODID+":textures/entities/BluePlasmaRender.png";
+		GhostPlasmaBolts.ProjectileGlows = true;
+		GhostPlasmaBolts.ProjectileSpeed = 4F;
+		GhostPlasmaBolts.Accuracy = 4F;
+		GhostPlasmaBolts.Gravity = 0.004F;
+		GhostPlasmaBolts.MaxEffectiveTicksAlive = 80;
+		GhostPlasmaBolts.ProjectileImpactProperties = "";
+		GhostPlasmaBolts.ProjImpactActArgs = new Object[]{ImpactBlockObject, new Object[]{"ImpactEntity", new String[]{"6", "0", "Die"}}};
+		GhostPlasmaBolts.ProjectileDragInAir = 0.99F;
+		GhostPlasmaBolts.ProjectileDragInWater = 0.5F;
+		
+		weapons[20] = new ItemWeapon(GhostPlasmaBolts);
+
+
+		//Warthog Turret
+		ItemWeaponProperties ChainGunBullet = new ItemWeaponProperties();
+		ChainGunBullet.RegisterItem = false;
+		ChainGunBullet.Name = Halocraft.MODID+".Vehicle.ChainGunBullet";
+		ChainGunBullet.ProjectileRenderProperties = Halocraft.MODID+":textures/entities/BulletRender.png";
+		ChainGunBullet.ProjectileGlows = false;
+		ChainGunBullet.ProjectileSpeed = 7F;
+		ChainGunBullet.Accuracy = 5F;
+		ChainGunBullet.Gravity = 0.004F;
+		ChainGunBullet.MaxEffectiveTicksAlive = 80;
+		ChainGunBullet.ProjectileImpactProperties = "";
+		ChainGunBullet.ProjImpactActArgs = new Object[]{ImpactBlockObject, new Object[]{"ImpactEntity", new String[]{"2", "0", "Die"}}};
+		ChainGunBullet.ProjectileDragInAir = 0.99F;
+		ChainGunBullet.ProjectileDragInWater = 0.5F;
+		
+		weapons[21] = new ItemWeapon(ChainGunBullet);
+
+
+		//Elite Carbine
+		ItemWeaponProperties EliteCarbine = new ItemWeaponProperties();
+		EliteCarbine.RegisterItem = false;
+		EliteCarbine.Name = Halocraft.MODID+".Mob.EliteCarbine";
+		EliteCarbine.ProjectileRenderProperties = Halocraft.MODID+":textures/entities/GreenPlasmaRender.png";
+		EliteCarbine.ProjectileGlows = true;
+		EliteCarbine.ProjectileSpeed = 8F;
+		EliteCarbine.Accuracy = 2F;
+		EliteCarbine.Gravity = 0.004F;
+		EliteCarbine.MaxEffectiveTicksAlive = 100;
+		EliteCarbine.ProjectileImpactProperties = "";
+		EliteCarbine.ProjImpactActArgs = new Object[]{ImpactBlockObject, new Object[]{"ImpactEntity", new String[]{"4", "0", "Die"}}};
+		EliteCarbine.ProjectileDragInAir = 0.99F;
+		EliteCarbine.ProjectileDragInWater = 0.5F;
+
+		weapons[22] = new ItemWeapon(EliteCarbine);
+		
+
+		//Elite Plasma Rifle
+		ItemWeaponProperties ElitePlasmaRifle = new ItemWeaponProperties();
+		ElitePlasmaRifle.RegisterItem = false;
+		ElitePlasmaRifle.Name = Halocraft.MODID+".Mob.ElitePlasmaRifle";
+		ElitePlasmaRifle.ProjectileRenderProperties = Halocraft.MODID+":textures/entities/BluePlasmaRender.png";
+		ElitePlasmaRifle.ProjectileGlows = true;
+		ElitePlasmaRifle.ProjectileSpeed = 4F;
+		ElitePlasmaRifle.Accuracy = 5F;
+		ElitePlasmaRifle.Gravity = 0.004F;
+		ElitePlasmaRifle.MaxEffectiveTicksAlive = 80;
+		ElitePlasmaRifle.ProjectileImpactProperties = "";
+		ElitePlasmaRifle.ProjImpactActArgs = new Object[]{ImpactBlockObject, new Object[]{"ImpactEntity", new String[]{"2", "0", "Die"}}};
+		ElitePlasmaRifle.ProjectileDragInAir = 0.99F;
+		ElitePlasmaRifle.ProjectileDragInWater = 0.5F;
+
+		weapons[23] = new ItemWeapon(ElitePlasmaRifle);
+		
+
+		//Grunt Plasma Pistol
+		ItemWeaponProperties GruntPlasmaPistol = new ItemWeaponProperties();
+		GruntPlasmaPistol.RegisterItem = false;
+		GruntPlasmaPistol.Name = Halocraft.MODID+".Mob.GruntPlasmaPistol";
+		GruntPlasmaPistol.ProjectileRenderProperties = Halocraft.MODID+":textures/entities/GreenPlasmaRender.png";
+		GruntPlasmaPistol.ProjectileGlows = true;
+		GruntPlasmaPistol.ProjectileSpeed = 2F;
+		GruntPlasmaPistol.Accuracy = 4F;
+		GruntPlasmaPistol.Gravity = 0.004F;
+		GruntPlasmaPistol.MaxEffectiveTicksAlive = 80;
+		GruntPlasmaPistol.ProjectileImpactProperties = "";
+		GruntPlasmaPistol.ProjImpactActArgs = new Object[]{ImpactBlockObject, new Object[]{"ImpactEntity", new String[]{"2", "0", "Die"}}};
+		GruntPlasmaPistol.ProjectileDragInAir = 0.99F;
+		GruntPlasmaPistol.ProjectileDragInWater = 0.5F;
+		
+		weapons[24] = new ItemWeapon(GruntPlasmaPistol);
+		
+		
+		//XXX: Send to KC's Weapon Mod to get processed and implemented
+		if (KCWeaponMod.registerModItems(Halocraft.MODID, "1.1", weapons))
 		{
 			System.out.println("KCWeaponMod: Successfully Registered Halocraft Weapons");
 		}
@@ -973,4 +1068,8 @@ public class InitHcWeapons {
 			System.err.println("KCWeaponMod - ERROR: Halocraft Weapons Were NOT Registered!");
 		}
 	}
+	
+	//GruntPlasmaPistol.ProjectileImpactProperties = "*ImpactBlock(tallgrass+vine, glass+leaves+glass_pane+yellow_flower+red_flower+brown_mushroom+red_mushroom+reeds+deadbush+waterlily+flower_pot+cocoa+double_plant+stained_glass+stained_glass_pane, Die), ImpactEntity(4, 0, Die)";
+	public static Object[] ImpactBlockObject = new Object[]{"ImpactBlock", new Object[]{new Block[]{Blocks.tallgrass, Blocks.vine}, new Block[]{Blocks.glass, Blocks.leaves, Blocks.glass_pane, Blocks.yellow_flower, Blocks.red_flower, Blocks.brown_mushroom, Blocks.red_mushroom, Blocks.reeds, Blocks.deadbush, Blocks.waterlily, Blocks.flower_pot, Blocks.cocoa, Blocks.double_plant, Blocks.stained_glass, Blocks.stained_glass_pane}, "Die"}};
+	
 }
